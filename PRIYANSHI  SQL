@@ -1,0 +1,20 @@
+#SELECT * FROM `bigquery-public-data.austin_crime.crime` LIMIT 1000
+#RESULT - WHOLE DATA WAS EXTRACTED 
+#SELECT unique_key,address,clearance_status,description,district FROM `bigquery-public-data.austin_crime.crime` LIMIT 1000
+#RESULT- COLUMNS WITH THESE NAMES WERE EXECUTED OR EXTRACTED WITH THE WHOLE DATA
+#SELECT * FROM `bigquery-public-data.austin_crime.crime` WHERE clearance_status="Not cleared" LIMIT 1000
+#RESULT - TABLE WAS EXECUTED WITH ALL NOT CLEARED STATUSES
+#SELECT COUNT(DISTINCT(unique_key)) FROM `bigquery-public-data.austin_crime.crime` LIMIT 1000
+#RESULT - 116674
+#SELECT *  FROM `bigquery-public-data.austin_crime.crime` WHERE district="UK" LIMIT 1000
+#RESULT- TABLE WAS EXECUTED WITH ALL UK DISTRICTS 
+#SELECT *  FROM `bigquery-public-data.austin_crime.crime` WHERE clearance_status="Cleared by Exception" LIMIT 1000
+#RESULT- TABLE WAS EXECUTED WITH ALL CLEARED STATUSES
+#SELECT MIN(unique_key) FROM `bigquery-public-data.austin_crime.crime` LIMIT 1000
+#RESULT- 20142
+#SELECT MAX(unique_key) FROM `bigquery-public-data.austin_crime.crime` LIMIT 1000
+#RESULT- 2015153441365
+#SELECT AVG(unique_key) FROM `bigquery-public-data.austin_crime.crime` GROUP BY unique_key LIMIT 1000
+#RESULT- AVERAGE WAS RECEIVED, FIRST VALUE - 2.015150483E9 AND THE LAST VALUE - 2.0153610934E10 OF UNIQUE KEY 
+#SELECT * FROM `bigquery-public-data.austin_crime.crime`ORDER BY unique_key DESC LIMIT 1000
+#RESULT- TABLE WITH A DESECDING ORDER F UNIQUE KEY WAS RECEIVED
